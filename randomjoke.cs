@@ -10,7 +10,7 @@ namespace MCGalaxy {
 	public class Example : Plugin {
 		public override string name { get { return "random joke"; } }
 		public override string MCGalaxy_Version { get { return "1.9.3.2"; } }
-		public override int build { get { return 100; } }
+		public override int build { get { return 1; } }
 		public override string creator { get { return "megaboi"; } }
 		public override bool LoadAtStartup { get { return true; } }
 
@@ -34,6 +34,7 @@ namespace MCGalaxy {
 	}
         public class Cmdjoke : Command2 {
             public override string name { get { return "joke"; } }
+            public override string shortcut { get { return "lol"; }}
             public override string type { get { return "other"; } }
             public override LevelPermission defaultRank { get { return LevelPermission.Guest; } }
         
@@ -48,7 +49,7 @@ namespace MCGalaxy {
             }
 
             public override void Help(Player p) {
-                p.Message("%T/Something %S- Does something.");
+                p.Message("%T/joke %S- its for the shits and giggles");
         }
     }
 }
